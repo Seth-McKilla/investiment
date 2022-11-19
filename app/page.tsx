@@ -19,7 +19,7 @@ export default async function Home() {
     return (
       <div
         key={cake._id}
-        className="max-w-sm rounded overflow-hidden shadow-lg m-4"
+        className="max-w-sm m-4 overflow-hidden rounded shadow-lg"
       >
         <div className="relative h-72">
           <Image
@@ -32,14 +32,14 @@ export default async function Home() {
           />
         </div>
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{cake.name}</div>
-          <p className="text-gray-700 text-base">{cake.shortDescription}</p>
-          <p className="text-gray-500 text-subtitle pt-1">
+          <div className="mb-2 text-xl font-bold">{cake.name}</div>
+          <p className="text-base text-gray-700">{cake.shortDescription}</p>
+          <p className="pt-1 text-gray-500 text-subtitle">
             Ingredients: {cake.ingredients.join(", ")}
           </p>
         </div>
         <div className="px-4 pt-1 pb-2">
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">
             stock: {cake.stock}
           </span>
         </div>
