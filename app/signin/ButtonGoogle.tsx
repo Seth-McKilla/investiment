@@ -4,7 +4,13 @@ import Button from "../components/Button";
 
 export default function ButtonGoogle() {
   return (
-    <Button onClick={() => signIn("google")}>
+    <Button
+      onClick={() =>
+        signIn("google", {
+          callbackUrl: "/",
+        })
+      }
+    >
       <svg
         className="w-4 h-4 mr-2 -ml-1"
         aria-hidden="true"
