@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "@next/font/google";
 
+import AuthContext from "./AuthContext";
 import Navbar from "./Navbar";
 
 const inter = Inter();
@@ -14,8 +15,10 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <head />
       <body>
-        <Navbar />
-        {children}
+        <AuthContext>
+          <Navbar />
+          {children}
+        </AuthContext>
       </body>
     </html>
   );

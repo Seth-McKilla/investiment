@@ -3,7 +3,7 @@ import Link from "next/link";
 import MenuUser from "./MenuUser";
 
 export default function Navbar() {
-  const auth = true;
+  const auth = false;
 
   return (
     <nav className="bg-gray-800">
