@@ -7,7 +7,7 @@ export default function ButtonGoogle() {
     <Button
       onClick={() =>
         signIn("google", {
-          callbackUrl: "/",
+          callbackUrl: "/dashboard",
         })
       }
     >

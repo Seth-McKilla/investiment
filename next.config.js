@@ -9,6 +9,7 @@ const nextConfig = {
   images: {
     domains: ["addapinch.com", "sallysbakingaddiction.com"],
   },
+  runtime: "experimental-edge",
 };
 
 module.exports = nextConfig;
