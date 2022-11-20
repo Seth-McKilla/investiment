@@ -1,9 +1,10 @@
+import { signIn } from "next-auth/react";
+
+import Button from "../components/Button";
+
 export default function ButtonGoogle() {
   return (
-    <button
-      type="button"
-      className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
-    >
+    <Button onClick={() => signIn("google")}>
       <svg
         className="w-4 h-4 mr-2 -ml-1"
         aria-hidden="true"
@@ -20,6 +21,6 @@ export default function ButtonGoogle() {
         ></path>
       </svg>
       Continue with Google
-    </button>
+    </Button>
   );
 }

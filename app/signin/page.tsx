@@ -3,6 +3,7 @@
 import { useSession } from "next-auth/react";
 
 import ButtonGoogle from "./ButtonGoogle";
+import Card from "../components/Card";
 import Container from "../components/Container";
 
 export default function SigninPage() {
@@ -12,7 +13,10 @@ export default function SigninPage() {
   return (
     <Container>
       <div className="flex items-center justify-center h-screen">
-        <ButtonGoogle />
+        <Card>
+          <p className="flex justify-center mb-6 text-2xl">Sign in</p>
+          <ButtonGoogle />
+        </Card>
       </div>
     </Container>
   );

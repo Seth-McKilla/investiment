@@ -6,6 +6,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { useSession, signIn } from "next-auth/react";
 
 import Avatar from "./Avatar";
+import Button from "./components/Button";
 import { classNames } from "utils/styles";
 
 export default function MenuUser() {
@@ -56,11 +57,8 @@ export default function MenuUser() {
       </Transition>
     </Menu>
   ) : (
-    <Link
-      href="/signin"
-      className="px-3 py-3 text-white bg-indigo-600 rounded-lg text-md hover:bg-indigo-700"
-    >
-      Sign in
+    <Link href="/signin">
+      <Button>Sign in</Button>
     </Link>
   );
 }
