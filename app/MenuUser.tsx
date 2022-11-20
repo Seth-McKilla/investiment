@@ -3,12 +3,15 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import { useSession } from "next-auth/react";
 
 import Avatar from "./Avatar";
 import { classNames } from "utils/styles";
 
 export default function MenuUser() {
-  return (
+  const { data: session } = useSession();
+
+  return session?.user ? (
     <Menu as="div" className="relative ml-3">
       <Menu.Button className="flex items-center justify-center w-12 h-12 text-xl bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
         <Avatar />
@@ -52,5 +55,12 @@ export default function MenuUser() {
         </Menu.Items>
       </Transition>
     </Menu>
+  ) : (
+    <Link
+      href="/signin"
+      className="px-3 py-3 text-white bg-indigo-600 rounded-lg text-md hover:bg-indigo-700"
+    >
+      Sign in
+    </Link>
   );
 }
