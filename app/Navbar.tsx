@@ -1,11 +1,12 @@
 import Link from "next/link";
 
+import Container from "./components/Container";
 import MenuUser from "./MenuUser";
 
 export default function Navbar() {
   return (
     <nav className="bg-gray-800">
-      <div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <Container>
         <div className="relative flex items-center justify-between h-16">
           <div className="flex items-center flex-1 sm:justify-start">
             <Link href="/" className="text-2xl font-bold text-white">
@@ -16,7 +17,7 @@ export default function Navbar() {
             <MenuUser />
           </div>
         </div>
-      </div>
+      </Container>
     </nav>
   );
 }

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import clientPromise from "lib/mongodb";
+
+import Container from "./components/Container";
 import { fetchCollection } from "utils/mongodb";
 
 async function getCakes() {
@@ -16,7 +18,7 @@ export default async function Home() {
   const cakes = await getCakes();
 
   return (
-    <div className="container px-2 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <Container>
       {cakes.map((cake: any) => {
         return (
           <div
@@ -48,6 +50,6 @@ export default async function Home() {
           </div>
         );
       })}
-    </div>
+    </Container>
   );
 }

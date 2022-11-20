@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { useSession } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 
 import Avatar from "./Avatar";
 import { classNames } from "utils/styles";
