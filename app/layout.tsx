@@ -17,7 +17,9 @@ export default function RootLayout({
       <body>
         <AuthContext>
           <Navbar />
-          {children}
+          <div className="px-2 pt-20 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            {children}
+          </div>
         </AuthContext>
       </body>
     </html>
