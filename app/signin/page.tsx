@@ -12,7 +12,7 @@ export default function SigninPage() {
 
   return (
     <Container>
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-screen -mt-20">
         <Card>
           <p className="flex justify-center mb-6 text-2xl">Sign in</p>
           <ButtonGoogle />

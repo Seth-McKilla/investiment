@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { useSession, signIn } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 import Avatar from "./Avatar";
 import Button from "./components/Button";
@@ -47,7 +47,7 @@ export default function MenuUser() {
                   active ? "bg-gray-100" : "",
                   "block px-4 py-2 text-sm w-full bg-indigo-600 text-white rounded-b-md hover:bg-indigo-700"
                 )}
-                onClick={() => console.log("Sign Out")}
+                onClick={() => signOut()}
               >
                 Sign out
               </Menu.Button>
