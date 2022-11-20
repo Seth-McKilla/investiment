@@ -16,12 +16,12 @@ export default async function Home() {
   const cakes = await getCakes();
 
   return (
-    <div className="container mx-auto px-36">
+    <div className="container px-2 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
       {cakes.map((cake: any) => {
         return (
           <div
             key={cake._id}
-            className="max-w-sm m-4 overflow-hidden rounded shadow-lg"
+            className="max-w-sm mb-4 overflow-hidden rounded shadow-lg"
           >
             <div className="relative h-72">
               <Image
