@@ -11,20 +11,17 @@ import { classNames } from "utils/styles";
 
 export default function MenuUser() {
   const { data: session, status } = useSession();
+  console.log(session);
 
   if (status === "loading") {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="w-12 h-12 bg-white rounded-full animate-pulse" />
-      </div>
-    );
+    return <div className="w-12 h-12 bg-gray-200 rounded-full animate-pulse" />;
   }
 
   if (status === "authenticated" && session?.user) {
     return (
       <Menu as="div" className="relative ml-3">
         <Menu.Button className="flex items-center justify-center w-12 h-12 text-xl bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-          <Avatar />
+          <Avatar name={session.user.name!} imgSrc={session.user.image!} />
         </Menu.Button>
         <Transition
           as={Fragment}
