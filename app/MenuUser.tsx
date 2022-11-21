@@ -11,7 +11,6 @@ import { classNames } from "utils/styles";
 
 export default function MenuUser() {
   const { data: session, status } = useSession();
-  console.log(session);
 
   if (status === "loading") {
     return <div className="w-12 h-12 bg-gray-200 rounded-full animate-pulse" />;

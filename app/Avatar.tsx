@@ -8,9 +8,13 @@ interface Props {
 export default function Avatar({ name, imgSrc }: Props) {
   if (!imgSrc) {
     return (
-      <div className="w-12 h-12 bg-gray-200 rounded-full">
+      <div className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-full">
         <span className="text-2xl text-gray-600">
-          {name?.charAt(0).toUpperCase()}
+          {name
+            .split(" ")
+            .map((n) => n[0])
+            .join("")
+            .toUpperCase()}
         </span>
       </div>
     );
