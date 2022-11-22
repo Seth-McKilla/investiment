@@ -6,10 +6,6 @@ const nextConfig = {
       { loader: "@next/font/google", options: { subsets: ["latin"] } },
     ],
   },
-  images: {
-    domains: ["addapinch.com", "sallysbakingaddiction.com"],
-  },
-  runtime: "experimental-edge",
 };
 
 module.exports = nextConfig;
