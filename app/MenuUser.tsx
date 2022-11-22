@@ -16,7 +16,7 @@ export default function MenuUser() {
     return null;
   }
 
-  if (status === "authenticated" && session?.user) {
+  if (session?.user) {
     return (
       <Menu as="div" className="relative ml-3">
         <Menu.Button className="flex items-center justify-center w-12 h-12 text-xl bg-gray-200 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">

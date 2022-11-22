@@ -7,7 +7,6 @@ import Card from "../components/Card";
 
 export default function SigninPage() {
   const { data: session, status } = useSession();
-  console.log(session, status);
 
   return (
     <div className="flex items-center justify-center h-screen -mt-20">
