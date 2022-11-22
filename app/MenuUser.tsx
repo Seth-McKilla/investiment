@@ -13,7 +13,7 @@ export default function MenuUser() {
   const { data: session, status } = useSession();
 
   if (status === "loading") {
-    return <div className="w-12 h-12 bg-gray-200 rounded-full animate-pulse" />;
+    return null;
   }
 
   if (status === "authenticated" && session?.user) {
